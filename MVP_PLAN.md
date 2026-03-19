@@ -168,6 +168,7 @@ Daily 파일에 포함할 항목:
 | File | Description |
 | --- | --- |
 | `MVP_PLAN.md` | 전체 MVP 범위, 단계별 계획, 병렬 작업 구조, 승인 원칙을 정리하는 메인 문서 |
+| `AGENT.md` | 다음 작업자가 가장 먼저 확인할 온보딩 요약 문서 |
 | `UI_REFERENCE_PLAN.md` | UI 레퍼런스 조사를 어떤 기준으로 진행할지 정의한 문서 |
 | `UI_REFERENCES.md` | 실제 UI 레퍼런스 조사 결과와 MVP 반영 방향을 기록하는 문서 |
 | `WIREFRAME.md` | 실제 MVP 화면 구조와 와이어프레임 초안을 정리하는 문서 |
@@ -180,10 +181,11 @@ Daily 파일에 포함할 항목:
 
 문서 사용 순서 권장:
 
-1. `MVP_PLAN.md`로 현재 전체 상태 확인
-2. 가장 최근 `daily/YYYY-MM-DD.md` 확인
-3. `TASK_BOARD.md`로 현재 작업 상태 확인
-4. 필요한 세부 문서 확인
+1. `AGENT.md`로 작업 개요와 문서 순서 확인
+2. `MVP_PLAN.md`로 현재 전체 상태 확인
+3. 가장 최근 `daily/YYYY-MM-DD.md` 확인
+4. `TASK_BOARD.md`로 현재 작업 상태 확인
+5. 필요한 세부 문서 확인
    - UI 작업: `UI_REFERENCE_PLAN.md`, `UI_REFERENCES.md`, `WIREFRAME.md`
    - AWS 작업: `AWS_PLAN.md`
    - LLM 작업: `LLM_PLAN.md`

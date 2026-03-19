@@ -8,6 +8,7 @@
 
 ## 2. To Do
 
+- GitHub push result 확인 및 저장소 업로드 완료
 - UI 레퍼런스 추가 조사
 - AWS 현재 환경 확인
 - LLM을 Mock 또는 실제 연동 중 하나로 결정
@@ -17,13 +18,12 @@
 
 ## 3. In Progress
 
-- UI 레퍼런스 구체화
-- AWS 실행 방식 검토
-- LLM 연동 방향 검토
+- 내일 작업 연속성을 위한 문서 정리 마무리
 
 ## 4. Done
 
 - 전체 MVP 계획 문서 작성
+- AGENT 온보딩 문서 작성
 - Daily 운영 구조 정의
 - 오늘자 Daily 파일 작성
 - UI 레퍼런스 조사 기준 문서 작성
@@ -43,7 +43,7 @@
 
 - UI, AWS, LLM은 병렬로 진행
 - 승인 필요한 작업은 먼저 `APPROVAL_LOG.md`에 기록
-- 다음날 시작 시 최신 Daily와 이 보드를 함께 확인
+- 다음날 시작 시 `AGENT.md`, 최신 Daily, 이 보드를 함께 확인
 
 ## 7. Next Update Rule
 
