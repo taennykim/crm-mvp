@@ -17,6 +17,8 @@
 | Date | Area | Request | Reason | Status | Notes |
 | --- | --- | --- | --- | --- | --- |
 | 2026-03-19 | Pending | No approval requested yet | Initial planning stage | Open | |
+| 2026-03-20 | LLM API | External Gemini API access | Real API integration for MVP question-answer flow | Pending | Requires outbound network and API key handling |
+| 2026-03-20 | App Config | `.env` usage for Gemini API key | Fast MVP setup with backend proxy | Pending | Should not expose key to frontend |
 
 ## 4. Areas To Track
 

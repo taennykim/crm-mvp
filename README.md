@@ -1,6 +1,6 @@
 # crm-mvp
 
-Insurance CRM MVP planning documents for a simple CS AI Agent UI project.
+Insurance CRM MVP planning documents and a simple CS AI Agent demo app.
 
 ## Included Documents
 
@@ -22,6 +22,22 @@ Build a simple insurance CRM MVP with:
 - consultation history
 - question input
 - AI answer panel
+- backend proxy for Gemini API
+
+## App Structure
+
+- `src/`: React frontend
+- `server/`: Express API proxy
+- `.env.example`: required environment variables
+
+## Local Run
+
+1. Copy `.env.example` to `.env` and set `GEMINI_API_KEY`.
+2. Run `npm install`.
+3. Start the API server with `npm run server`.
+4. Start the frontend with `npm run dev`.
+
+The Vite dev server proxies `/api` and `/health` requests to `http://localhost:8787`.
 
 ## Working Rules
 

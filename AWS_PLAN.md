@@ -78,6 +78,55 @@
 
 ## 7. Next Step
 
-1. 현재 AWS 환경 상태를 확인한다.
-2. MVP 실행 방식 후보를 정리한다.
-3. 승인 필요한 인프라 변경 항목을 분리한다.
+1. 로컬 기준 AWS CLI 설치 여부, 환경 변수, 자격 증명 파일 존재 여부를 먼저 확인한다.
+2. 로컬 확인만으로 부족하면 실제 AWS API 조회 필요 여부를 판단한다.
+3. 실제 AWS API 조회나 리소스 변경이 필요하면 승인 범위를 먼저 기록한다.
+4. MVP 실행 방식 후보를 정리한다.
+5. 승인 필요한 인프라 변경 항목을 분리한다.
+
+## 8. Current Check Result - 2026-03-20
+
+- AWS CLI binary exists: `/usr/local/bin/aws`
+- AWS CLI version confirmed: `aws-cli/2.33.18`
+- local `~/.aws` directory not found
+- local AWS-related environment variables not found
+- direct metadata endpoint access was not available from the checked shell path
+- AWS STS identity check succeeded from the user shell
+- AWS CLI credential source confirmed as `iam-role`
+- AWS region confirmed as `ap-northeast-2`
+- S3 bucket listing succeeded from the user shell
+- IMDSv2 token flow succeeded from the user shell
+
+확인된 AWS identity:
+
+- Account: `580075786326`
+- ARN: `arn:aws:sts::580075786326:assumed-role/terraform-poc-iac-role/i-0279082dd48ce62d2`
+- Role: `terraform-poc-iac-role`
+- Session type: assumed role on EC2 instance
+- Instance ID: `i-0279082dd48ce62d2`
+- Instance profile ARN: `arn:aws:iam::580075786326:instance-profile/terraform-poc-iac-role`
+
+확인된 접근 특성:
+
+- credential source: IMDS / instance role
+- region source: IMDS
+- S3 `ListBuckets` access: confirmed
+- EC2 read scope: not yet confirmed from CLI result
+
+확인된 S3 buckets:
+
+- `aws-athena-query-results-ap-northeast-2-580075786326`
+- `aws-cloudtrail-logs-580075786326-2c15fddd`
+- `aws-saas-an2-vpc-001-flow-log-580075786326`
+- `do-not-delete-ssm-diagnosis-580075786326-ap-northeast-2-lkf95`
+- `llm-portal-artifacts-580075786326-1773976148`
+- `s3-helm-jhun-mgmt-dev-kr`
+- `s3-tfstate-jhun80-mgmt-dev-kr`
+- `vllm-mvp-model`
+
+현재까지 확인 기준:
+
+- 현재 작업 환경은 AWS 계정 `580075786326` 의 assumed role 세션으로 실행 중이다.
+- 로컬 credential 파일 없이도 인스턴스 또는 런타임 역할 기반 접근이 가능한 상태로 보인다.
+- S3 조회 권한은 확인되었고, 다른 서비스의 읽기 범위는 추가 AWS API 조회로 확인해야 한다.
+- 리소스 변경 작업 전에는 최소 권한 원칙과 승인 절차를 유지한다.

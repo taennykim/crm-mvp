@@ -174,6 +174,8 @@ Daily 파일에 포함할 항목:
 | `WIREFRAME.md` | 실제 MVP 화면 구조와 와이어프레임 초안을 정리하는 문서 |
 | `AWS_PLAN.md` | AWS 환경에서 MVP를 실행하기 위한 최소 구성, 승인 범위, 점검 항목을 정리하는 문서 |
 | `LLM_PLAN.md` | 질문/답변 흐름과 Mock 또는 실제 LLM 연동 방향을 정리하는 문서 |
+| `API_INTEGRATION_PLAN.md` | 실제 LLM API 연결 방식, key 보관 방식, 프록시 구조를 정리하는 문서 |
+| `IMPLEMENTATION_PLAN.md` | 프론트엔드, 백엔드 프록시, Gemini 연동 순서를 정리하는 구현 계획 문서 |
 | `APPROVAL_LOG.md` | AWS, 네트워크, 권한, 외부 연동 등 승인 내역을 기록하는 문서 |
 | `TASK_BOARD.md` | 현재 작업 상태를 To Do, In Progress, Done, Blocked 기준으로 관리하는 작업 보드 |
 | `DAILY_TEMPLATE.md` | 날짜별 Daily 작업 기록을 작성할 때 사용하는 템플릿 |
@@ -188,7 +190,8 @@ Daily 파일에 포함할 항목:
 5. 필요한 세부 문서 확인
    - UI 작업: `UI_REFERENCE_PLAN.md`, `UI_REFERENCES.md`, `WIREFRAME.md`
    - AWS 작업: `AWS_PLAN.md`
-   - LLM 작업: `LLM_PLAN.md`
+   - LLM 작업: `LLM_PLAN.md`, `API_INTEGRATION_PLAN.md`
+   - 구현 작업: `IMPLEMENTATION_PLAN.md`
    - 승인 확인: `APPROVAL_LOG.md`
 
 ## 10. Next Actions
